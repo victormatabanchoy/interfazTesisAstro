@@ -1,0 +1,100 @@
+---
+// Puedes añadir lógica adicional aquí en el futuro si necesitas integrar una biblioteca para escanear códigos QR.
+---
+
+<section class="scan-qr-container">
+  <h1>Escanear QR o Lugar</h1>
+  <p class="description">
+    Escanea el código QR de los sitios turísticos en Cabrera para obtener más información sobre cada lugar.
+  </p>
+
+  <div class="qr-instructions">
+    <p>Apunta tu cámara al código QR o selecciona una opción de escaneo.</p>
+    <button class="scan-button" onclick="startScan()">Iniciar Escaneo</button>
+  </div>
+
+  <div class="no-qr">
+    <p>¿No tienes un código QR? Selecciona una ubicación de la lista de lugares destacados:</p>
+    <a href="/favorites" class="favorites-link">Ir a Lugares Favoritos</a>
+  </div>
+</section>
+
+<script>
+  function startScan() {
+    alert("El escaneo de QR estará disponible en una futura actualización.");
+  }
+</script>
+
+<style>
+  :root {
+    --bg-gradient-start: #4caf50;
+    --bg-gradient-end: #2b8a3e;
+    --text-color: #ffffff;
+    --button-bg-color: #6b8e23;
+    --button-hover-color: #3cb371;
+    --button-text-color: #ffffff;
+  }
+
+  .scan-qr-container {
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--text-color);
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .scan-qr-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #d1ffd1;
+  }
+
+  .qr-instructions {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .scan-button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .scan-button:hover {
+    background-color: var(--button-hover-color);
+  }
+
+  .no-qr {
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+
+  .favorites-link {
+    color: #ffeb3b;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  .favorites-link:hover {
+    text-decoration: underline;
+  }
+</style>

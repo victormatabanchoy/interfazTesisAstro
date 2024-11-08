@@ -1,0 +1,32 @@
+---
+const { text } = Astro.props;
+
+// Función de redirección
+const handleClick = () => {
+  window.location.href = "/lobby";
+};
+---
+
+<a href="/lobby" class="cta-button">
+  {text}
+</a>
+
+<style>
+  .cta-button {
+    background: linear-gradient(135deg, #6b8e23, #3cb371);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+</style>

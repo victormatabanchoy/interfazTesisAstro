@@ -1,0 +1,91 @@
+---
+const options = [
+  { id: 'scanQR', label: 'Escanear QR / Lugar', description: 'Encuentra más información sobre los sitios turísticos de Cabrera escaneando un código QR.', icon: '📷', link: '/scan-qr' },
+  { id: 'favorites', label: 'Lugares Favoritos', description: 'Explora y guarda tus lugares favoritos de Cabrera para recordarlos siempre.', icon: '⭐', link: '/favorites' },
+];
+---
+
+<section class="options-container">
+  <h1>Explora Cabrera, Nariño</h1>
+  <p class="subtitle">Elige una opción para continuar explorando este hermoso corregimiento</p>
+
+  <div class="options-grid">
+    {options.map((option) => (
+      <a href={option.link} class="option-card">
+        <span class="option-icon">{option.icon}</span>
+        <h2 class="option-label">{option.label}</h2>
+        <p class="option-description">{option.description}</p>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  :root {
+    --main-bg-color: #2b8a3e;
+    --secondary-bg-color: #4caf50;
+    --text-color: #ffffff;
+    --card-bg-color: #ffffff;
+    --card-text-color: #333;
+    --icon-size: 2rem;
+    --border-radius: 12px;
+    --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .options-container {
+    background: linear-gradient(135deg, var(--main-bg-color), var(--secondary-bg-color));
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  .options-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .option-card {
+    background: var(--card-bg-color);
+    color: var(--card-text-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .option-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .option-icon {
+    font-size: var(--icon-size);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .option-label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .option-description {
+    font-size: 0.9rem;
+    color: #555;
+  }
+</style>
