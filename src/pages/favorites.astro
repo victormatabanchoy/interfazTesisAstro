@@ -1,45 +1,62 @@
 ---
 const favoritePlaces = [
   {
-    name: "Mirador de Cabrera",
-    description: "Un hermoso mirador con vistas panorámicas de Cabrera y sus paisajes.",
-    imgSrc: "/images/mirador-cabrera.jpg",
-    link: "/places/mirador-cabrera"
+    name: "Templo del Señor de la Buena Esperanza",
+    description:
+      "el templo se encuentra ubicado en la plaza principal del corregimiento su reconstrucción, realizada entre 1935 y 1941, esta se destaca por su gran belleza arquitectónica. ",
+    imgSrc:
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy2T8SbNqMC-7sgac1_SjBxOZ8_IfX7cU-p8ovqq_9H7btR2xlY9jaOB5pyPDNq9t7lsEXHLoT-WE_5xqgemamaMY9GAc8jMiZYF_3dsXzxGpWNTj44DHENVZhqTns4mBI_E1fdtSrEM/s1600/CABRERA%5B1%5D.JPG",
+    link: "/places/mirador-cabrera",
   },
   {
-    name: "Cascada La Playa",
-    description: "Una cascada impresionante rodeada de naturaleza pura.",
-    imgSrc: "/images/cascada-la-playa.jpg",
-    link: "/places/cascada-la-playa"
+    name: "Cruz de San Miguel",
+    description:
+      "su ascenso marca sobre el trayecto tres cruces del cerro una hecha en helecho en el año de 1940, la segunda en concreto en 1946, la tercera de madera a finales de los 90.",
+    imgSrc: "https://i.ytimg.com/vi/c3MDXg4nrZE/sddefault.jpg",
+    link: "/places/cascada-la-playa",
   },
   {
-    name: "Parque Natural de Cabrera",
-    description: "Un parque natural con senderos y biodiversidad local.",
-    imgSrc: "/images/parque-natural-cabrera.jpg",
-    link: "/places/parque-natural-cabrera"
+    name: "Petroglifos",
+    description:
+      "esculturas de arte rupestre se exhibe en 6 piedras ubicadas en distintas veredas Buenavista alto, vereda el purgatorio y vereda duarte, estas tienen talladas figuras tradicionales de los pueblos de los pastos.",
+    imgSrc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoe0CMA1tOFSkyEG6WIBgbI5MIVZOqCVj93w&s",
+    link: "/places/parque-natural-cabrera",
   },
   {
-    name: "Iglesia de Cabrera",
-    description: "Una iglesia histórica que refleja la arquitectura colonial de la región.",
-    imgSrc: "/images/iglesia-cabrera.jpg",
-    link: "/places/iglesia-cabrera"
-  }
+    name: "Paramo del fraile",
+    description:
+      "conocido por su rica biodiversidad con fuentes de agua e impresionantes paisajes de frailejones, cuenta con un mirador de la planada que permite disfrutar de la belleza del paisaje.",
+    imgSrc: "https://i.ytimg.com/vi/7Jlvo2ln6fg/sddefault.jpg",
+    link: "/places/iglesia-cabrera",
+  },
 ];
 ---
 
 <section class="favorites-container">
   <h1>Lugares Favoritos en Cabrera</h1>
-  <p class="intro">Explora algunos de los sitios turísticos más destacados en Cabrera, cada uno con su encanto único.</p>
+  <p class="intro">
+    Explora algunos de los sitios turísticos más destacados en Cabrera, cada uno
+    con su encanto único.
+  </p>
 
   <div class="places-list">
-    {favoritePlaces.map((place) => (
-      <div class="place-card">
-        <img src={place.imgSrc} alt={`Imagen de ${place.name}`} class="place-image" />
-        <h2 class="place-name">{place.name}</h2>
-        <p class="place-description">{place.description}</p>
-        <a href={place.link} class="details-link">Ver más detalles</a>
-      </div>
-    ))}
+    {
+      favoritePlaces.map((place) => (
+        <div class="place-card">
+          <img
+            src={place.imgSrc}
+            alt={`Imagen de ${place.name}`}
+            class="place-image"
+          />
+          <h2 class="place-name">{place.name}</h2>
+          <p class="place-description">{place.description}</p>
+          <a href={place.link} class="details-link">
+            Ver más detalles
+          </a>
+        </div>
+      ))
+    }
   </div>
 </section>
 
@@ -83,7 +100,9 @@ const favoritePlaces = [
     box-shadow: 0px 4px 8px var(--card-shadow);
     padding: 1rem;
     text-align: left;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
   }
 
   .place-card:hover {
